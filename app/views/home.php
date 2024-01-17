@@ -16,14 +16,14 @@
         </div>
         <div class="content">
             <div class="login">
-                <form action="login.php" method="post">
+                <form action="index.php?action=login" method="post">
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="password" name="password" placeholder="Password" required>
                     <input type="submit" name="submit" value="Login">
                 </form>
             </div>
             <div class="register">
-                <form action="register.php" method="post">
+                <form action="index.php?action=register" method="post">
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="password" placeholder="Password" required>

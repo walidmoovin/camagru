@@ -7,7 +7,6 @@
 .jar
 .war
 *.log
-*.sql
 *.sqlite
 .DS_Store
 .DS_Store?
