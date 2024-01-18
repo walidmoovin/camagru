@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/', $password)) {
         exit('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number.');
-    }    
+    }       
 
     // Check if user already exists, hash password, and insert user into database
     $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
     $stmt->execute([$username, $email, $hashed_password]);
-    header("Location: /");
+    header("Location: /public/index.php "); 
     exit();
 }
-?>
+?>  
